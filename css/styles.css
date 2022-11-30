@@ -1,0 +1,523 @@
+:root{
+    --color-headings: #000;
+    --color-primary: #7a0202;
+    --color-secondary:#fff;
+    --color-content:  #222;
+    --color-link: #ecc511;
+}
+
+/* General */
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    /* 62.5% of 16px = 10px */
+    font-size: 62.5%;
+
+}
+
+body {
+    background-color: var(--color-secondary);
+    font-family: 'Arimo', Helvetica, sans-serif;
+    line-height: 1.5;
+   
+    
+   
+    
+
+}
+
+/* Heading */
+h1,
+h2,
+h3 {
+    font-family: 'tt-norms-pro', Helvetica, sans-serif;
+    color: var(--color-headings);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+h1{
+    font-size: 7rem;
+}
+
+h2 {
+    font-size: 1rem;
+}
+
+h4{
+    font-size: 3rem;
+    font-weight: 300;
+
+}
+
+/* Paragraph */
+
+p { 
+    margin-top: 0
+
+}
+
+/* Blocks */
+
+
+
+.block {
+    margin: 5rem 5rem 0 5rem;
+
+}
+
+.block__gallery{
+    margin: 0;
+}
+
+.block__header{
+    text-align: center;
+}
+
+@media screen and (min-width: 1024px) {
+    .block__gallery {
+        margin: 5rem 5rem 0 5rem;
+}
+}
+
+/* Grids */
+.grid {
+    display: grid;
+    
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .grid--1x4 {
+        grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .grid--1x4 {
+        grid-template-columns: repeat(4, 1fr);
+
+    }
+
+    .grid--1x2{
+        display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 1rem;
+    }
+
+}
+
+
+/* First page */
+
+.portfolio{
+    width: 100%;
+    
+
+}
+
+.byname {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+
+.columbus_img {
+    margin-top: 1rem;
+    width: 100%;
+
+}
+
+@media screen and (min-width: 1024px) {
+    .columbus_img {
+        margin-top: 5rem;
+
+    }
+
+    .portfolio {
+            width: 50%;
+    
+        }
+    
+    .byname {
+            justify-content: center;
+    
+        }
+}
+
+/* Second page */
+
+.nametag{
+    font-size: 2rem;
+    text-align: center;
+
+}
+
+.quote_one{
+    font-size: 2rem;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    text-align: center;
+  
+}
+
+.quote_two{
+font-size: 1.5rem;
+margin: 0 auto;
+text-align: center;
+margin-bottom: 3rem;
+}
+
+
+
+.surf_img{
+    width: 100%;
+}
+
+.surf__item{
+    margin: 0;
+}
+
+.logo{
+    width: 90%;
+}
+
+
+
+@media screen and (min-width: 1024px) {
+
+
+    .logo {
+        display: none;
+    }
+
+    .nametag{
+        text-align: left;
+    }
+
+        .testimonial {
+            padding: 0;
+            position: relative;
+        }
+
+    .quote_one {
+        font-size: 2.5rem;
+        text-align: left;
+      
+    
+        }
+
+    .quote_two {
+            font-size: 1.3rem;
+            text-align: left;
+            position: absolute;
+            bottom: 0;
+    
+        }
+
+
+        .surf_img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+
+        .surf__item--1 {
+            grid-column-start: 1;
+            grid-column-end: 3;
+            grid-row-start: 1;
+            grid-row-end: 2;
+
+
+}
+}
+
+@media screen and (min-width: 1440px) {
+    .quote_one {
+    margin-bottom: 15rem;
+    padding-right: 11rem;
+    }
+}
+
+/* Third page – Gallery */
+
+.gallery{
+    display: grid;
+    
+}
+
+.gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+ .gallery__item--7 {
+     grid-column-start: 1;
+     grid-column-end: 1;
+     grid-row-start: 1;
+     grid-row-end: 1;
+     text-align: center;
+ }
+
+@media screen and (min-width: 1024px) {
+
+    .gallery {
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(8, 5vw);
+            grid-gap: 1rem;
+            
+        }
+
+    .gallery__item{
+        margin: 0;
+    }
+
+    .gallery__item--1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+  .gallery__item--2 {
+      grid-column-start: 1;
+      grid-column-end: 3;
+      grid-row-start: 3;
+      grid-row-end: 6;
+  }
+
+   .gallery__item--3 {
+       grid-column-start: 1;
+       grid-column-end: 3;
+       grid-row-start: 6;
+       grid-row-end: 9;
+   }
+
+   .gallery__item--4 {
+       grid-column-start: 3;
+       grid-column-end: 7;
+       grid-row-start: 5;
+       grid-row-end: 9;
+   }
+
+    .gallery__item--5 {
+        grid-column-start: 7;
+        grid-column-end: 9;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        }
+
+        .gallery__item--6 {
+            grid-column-start: 7;
+            grid-column-end: 9;
+            grid-row-start: 3;
+            grid-row-end: 5;
+        }
+
+        .gallery__item--7 {
+            grid-column-start: 7;
+            grid-column-end: 9;
+            grid-row-start: 8;
+            grid-row-end: 9;
+        }
+
+
+   
+    .tagline{
+        font-size: .8rem;
+        text-align: left;
+        margin-bottom: 0;
+        
+    }
+    
+}
+
+
+
+/* Forth page */
+
+.experince{
+    display: grid;
+    
+}
+
+
+.profil__img{
+    width: 100%;
+        height: 100%;
+        object-fit: cover;
+}
+
+.experince__item--2, .experince__item--3{
+    text-align: center;
+
+}
+
+
+
+@media screen and (min-width: 1024px) {
+
+    .experince {
+        display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            grid-template-rows: repeat(8, 5vw);
+            grid-gap: 3rem;
+
+    }
+
+    .experince__item {
+        margin: 0;
+        
+    }
+
+    .experince__item--1 {
+            grid-column-start: 1;
+            grid-column-end: 5;
+            grid-row-start: 1;
+            grid-row-end: 8;
+            
+        }
+
+        .experince__item--2 {
+            grid-column-start: 5;
+            grid-column-end: 7;
+            grid-row-start: 3;
+            grid-row-end: 5;
+        }
+
+        .experince__item--2, .experince__item--3{
+            text-align: left;
+        }
+
+            .experince__item--3 {
+                    grid-column-start: 7;
+                    grid-column-end: 9;
+                    grid-row-start: 3;
+                    grid-row-end: 5;
+                }
+
+}
+
+
+/* Firth page - contact*/
+
+
+.experince {
+    display: grid;
+
+}
+
+
+.contact__img__first, .contact__img__two {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contact__item--1,
+.contact__item--2, 
+.contact__item--3 {
+    text-align: center;
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    .contact__header{
+        font-size: 1rem;
+        font-family: 'Arimo',Helvetica,sans-serif;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
+
+    .contact__p{
+        font-size: 3rem;
+        font-family:'tt-norms-pro', Helvetica, sans-serif;
+        line-height: 4rem;
+        font-weight: 900;
+    }
+
+    .contact {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(8, 5vw);
+        grid-gap: 3rem;
+
+    }
+
+    .contact__item {
+        margin: 0;
+        
+    }
+
+        .contact__img__first{
+        width: 50%;
+        height: 50%;       
+        }
+
+    .contact__item--1{
+        grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
+            grid-row-end: 5;
+            margin: 0;
+    }
+
+    .contact__item--2 {
+             grid-column-start: 1;
+             grid-column-end: 4;
+             grid-row-start: 3;
+             grid-row-end: 4;
+         }
+
+        .contact__item--3 {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 4;
+            grid-row-end: 5;
+        }
+
+    .contact__item--4 {
+        grid-column-start: 4;
+        grid-column-end: 8;
+        grid-row-start: 1;
+        grid-row-end: 8;
+
+    }
+
+    .contact__item--5 {
+        grid-column-start: 6;
+        grid-column-end: 10;
+        grid-row-start: 1;
+        grid-row-end: 8;
+    }
+
+        .contact__item--1,
+        .contact__item--2,
+        .contact__item--3 {
+            text-align: left;
+    
+        }
+
+
+
+}
+
+
+
+
